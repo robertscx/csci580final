@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\whitted"
   ],
-  "SelectedNode": "\\main.cpp",
+<<<<<<< HEAD
+  "SelectedNode": "\\.gitignore",
+=======
+>>>>>>> main
   "PreviewInSolutionExplorer": false
 }
