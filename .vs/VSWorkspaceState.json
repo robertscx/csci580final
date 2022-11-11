@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\whitted",
+    "\\whitted\\whitted"
   ],
-  "SelectedNode": "\\whitted.sln",
+  "SelectedNode": "\\whitted\\whitted\\main.cpp",
   "PreviewInSolutionExplorer": false
 }
