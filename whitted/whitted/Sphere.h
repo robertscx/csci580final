@@ -41,6 +41,11 @@ public:
 		N = normalize(p -  center);
 	}
 
+	Boundbox getBounds() override {
+		return Boundbox(Vector3f(center.x - radius, center.y - radius, center.z - radius),
+						Vector3f(center.x + radius, center.y + radius, center.z - radius));
+	}
+
 
 	Vector3f center;
 	float radius, radius_sqrt; // 保存 r平方，减少计算

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Object.h"
+#include "BVH.h"
 
 #include <cstring>
 
@@ -26,6 +27,43 @@ bool rayTriangleIntersect(const Vector3f& v0, const Vector3f& v1, const Vector3f
 	return false;
 }
 
+class Triangle : public Object
+{
+public:
+	Vector3f v0, v1, v2; // vertices A, B ,C , counter-clockwise order
+	Vector3f e1, e2;     // 2 edges v1-v0, v2-v0;
+	Vector3f t0, t1, t2; // texture coords
+	Vector3f normal;
+	Material* m;
+
+	Triangle(Vector3f _v0, Vector3f _v1, Vector3f _v2, Material* _m = nullptr)
+		: v0(_v0), v1(_v1), v2(_v2), m(_m)
+	{
+		e1 = v1 - v0;
+		e2 = v2 - v0;
+		normal = normalize(crossProduct(e1, e2));
+	}
+
+	//bool intersect(const Ray& ray);
+	//bool intersect(const Ray& ray, float& tnear, uint32_t& index) const;
+	//Intersection getIntersection(Ray ray) override;
+	void getSurfaceProperties(const Vector3f& P, const Vector3f& I,
+		const uint32_t& index, const Vector2f& uv,
+		Vector3f& N, Vector2f& st) const
+	{
+		N = normal;
+		//        throw std::runtime_error("triangle::getSurfaceProperties not
+		//        implemented.");
+	}
+	/*inline Vector3f evalDiffuseColor(const Vector2f&) const {
+		return Vector3f(0.5, 0.5, 0.5);
+	}
+	*/
+	Boundbox getBounds() override;
+
+	inline Boundbox getBounds() override { return Union(Boundbox(v0, v1), v2); }
+};
+
 
 class MeshTriangle : public Object
 {
@@ -34,6 +72,8 @@ public:
 	uint32_t numTriangles; // object mesh中triangle的数量
 	std::unique_ptr<uint32_t[]> vertexIndex; // 哪些顶点属于一个三角形
 	std::unique_ptr<Vector2f[]> uvCoordinates;
+
+	Boundbox bounding_box;
 
 	MeshTriangle(const Vector3f* verts, const uint32_t* vertsIndex, const uint32_t& numTris, const Vector2f* uv) 
 	{
@@ -101,5 +141,7 @@ public:
 		float pattern = (fmodf(uv.x * scale,1) > 0.5 ^ (fmodf(uv.y * scale, 1) > 0.5));
 		return lerp(Vector3f(0.815, 0.235, 0.031), Vector3f(0.937, 0.937, 0.231), pattern);
 	}
+
+	inline Boundbox getBounds() { return bounding_box; }
 
 };

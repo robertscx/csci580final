@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Lightray.h"
 #include "Vector.h"
 #include <limits>

@@ -32,4 +32,6 @@ public:
 	Vector3f diffuseColor;
 	float spew;
 	float ior; // ÕÛÉäÂÊ
+
+	virtual Boundbox getBounds() = 0;
 };
