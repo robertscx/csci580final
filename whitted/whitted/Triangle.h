@@ -2,6 +2,7 @@
 
 #include "Object.h"
 #include "BVH.h"
+#include "OBJ_Loader.h"
 
 #include <cstring>
 
@@ -36,7 +37,7 @@ public:
 	Vector3f normal;
 	Material* m;
 
-	Triangle(Vector3f _v0, Vector3f _v1, Vector3f _v2, Material* _m = nullptr)
+	Triangle(Vector3f _v0, Vector3f _v1, Vector3f _v2)
 		: v0(_v0), v1(_v1), v2(_v2), m(_m)
 	{
 		e1 = v1 - v0;
@@ -73,6 +74,8 @@ public:
 	std::unique_ptr<uint32_t[]> vertexIndex; // 哪些顶点属于一个三角形
 	std::unique_ptr<Vector2f[]> uvCoordinates;
 
+	std::vector<Triangle> triangles;
+	BVH* bvh;
 	Boundbox bounding_box;
 
 	MeshTriangle(const Vector3f* verts, const uint32_t* vertsIndex, const uint32_t& numTris, const Vector2f* uv) 
@@ -97,7 +100,51 @@ public:
 		memcpy(uvCoordinates.get(), uv, sizeof(Vector2f) * numVertex);
 	}
 
-	bool intersect(const Vector3f& orgin, const Vector3f& dir, float& tnear, uint32_t& index , Vector2f& bbs) const override
+	MeshTriangle(const std::string& filename) {
+		objl::Loader loader;
+		loader.LoadFile(filename);
+
+		auto mesh = loader.LoadedMeshes[0];
+
+		Vector3f min_vert = Vector3f(std::numeric_limits<float>::infinity(),
+									 std::numeric_limits<float>::infinity(),
+									 std::numeric_limits<float>::infinity());
+
+		Vector3f max_vert = Vector3f(-std::numeric_limits<float>::infinity(),
+									 -std::numeric_limits<float>::infinity(),
+									 -std::numeric_limits<float>::infinity());
+
+		for (int i = 0; i < mesh.Vertices.size(); i += 3) {
+			std::array<Vector3f, 3> face_vertices;
+			for (int j = 0; j < 3; j++) {
+				auto vert = Vector3f(mesh.Vertices[i + j].Position.X,
+					mesh.Vertices[i + j].Position.Y,
+					mesh.Vertices[i + j].Position.Z) *
+					60.f;
+				face_vertices[j] = vert;
+
+				min_vert = Vector3f(std::min(min_vert.x, vert.x),
+					std::min(min_vert.y, vert.y),
+					std::min(min_vert.z, vert.z));
+				max_vert = Vector3f(std::max(max_vert.x, vert.x),
+					std::max(max_vert.y, vert.y),
+					std::max(max_vert.z, vert.z));
+			}
+
+			triangles.emplace_back(face_vertices[0], face_vertices[1],
+				face_vertices[2], new_mat);
+		}
+
+		bounding_box = Boundbox(min_vert, max_vert);
+		std::vector<Object*> primitives;
+		for (auto& tri : triangles) {
+			primitives.push_back(&tri);
+		}
+
+		bvh = new BVH(primitives);
+	}
+
+	bool intersect(const Ray& ray, float& tnear, uint32_t& index , Vector2f& bbs) const override
 	{
 		bool isInter = false;
 		for (uint32_t i = 0; i < numTriangles; i++) 
@@ -106,7 +153,7 @@ public:
 			const Vector3f& v1 = vertices[vertexIndex[i * 3 + 1]];
 			const Vector3f& v2 = vertices[vertexIndex[i * 3 + 2]];
 			float t, b1, b2;
-			if (rayTriangleIntersect(v0, v1, v2, orgin, dir, t, b1, b2) && t < tnear) {
+			if (rayTriangleIntersect(v0, v1, v2, ray.orgin, ray.direction, t, b1, b2) && t < tnear) {
 				tnear = t;
 				bbs.x = b1;
 				bbs.y = b2;

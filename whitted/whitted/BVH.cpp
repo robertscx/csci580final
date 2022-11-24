@@ -76,3 +76,17 @@ BVHNode* BVH::recursiveBuild(std::vector<Object*> objects) {
 
 	return node;
 }
+
+Intersection BVH::intersect(const Ray& ray) const {
+	Intersection isect;
+	if (!root)
+		return isect;
+	isect = BVH::getIntersection(root, ray);
+	return isect;
+}
+
+Intersection BVH::getIntersection(BVHNode* node, const Ray& ray) const
+{
+	// TODO Traverse the BVH to find intersection
+
+}

@@ -47,7 +47,11 @@ public:
 
 	BVH(std::vector<Object*> p, int maxPrimsInNode = 1);
 
-	~BVH();
+	~BVH() = default;
 
     BVHNode* recursiveBuild(std::vector<Object*> objects);
+
+    Intersection intersect(const Ray& ray) const;
+
+    Intersection getIntersection(BVHNode* node, const Ray& ray)const;
 };
