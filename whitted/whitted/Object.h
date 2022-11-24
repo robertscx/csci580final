@@ -21,6 +21,8 @@ public:
 	
  	virtual bool intersect(const Ray& ray, float&, uint32_t&, Vector2f&) const = 0; // 纯虚函数
 
+	virtual Intersection getIntersection(Ray _ray) = 0;
+
 	virtual void getSurfaceNormal(const Vector3f&, const Vector3f&, const uint32_t&, const Vector2f&, Vector3f&,
 		Vector2f&) const = 0; // 获取表面的法线
 

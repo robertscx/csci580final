@@ -45,6 +45,9 @@ class Boundbox
 		{
 			return (i == 0) ? pMin : pMax;
 		}
+
+		inline bool IntersectP(const Ray& ray, const Vector3f& invDir,
+			const std::array<int, 3>& dirisNeg) const;
 };
 
 inline Boundbox Union(const Bounds3& b1, const Bounds3& b2)
@@ -61,4 +64,35 @@ inline Boundbox Union(const Bounds3& b, const Vector3f& p)
 	ret.pMin = Vector3f(fmin(b1.pMin.x, p.x), fmin(b1.pMin.y, p.y), fmin(b1.pMin.z, p.z));
 	ret.pMax = Vector3f(fmin(b1.pMax.x, p.x), fmin(b1.pMax.y, p.y), fmin(b1.pMax.z, p.z));
 	return ret;
+}
+
+inline bool Boundbox::IntersectP(const Ray& ray, const Vector3f& invDir,
+	const std::array<int, 3>& dirIsNeg) const
+{
+	// invDir: ray direction(x,y,z), invDir=(1.0/x,1.0/y,1.0/z), use this because Multiply is faster that Division
+	// dirIsNeg: ray direction(x,y,z), dirIsNeg=[int(x>0),int(y>0),int(z>0)], use this to simplify your logic
+
+	// t = (ray.xyz - origin.xyz) / dxyz
+	double tmin(0.0), tmax(0.0);
+	// x
+	tmin = (pMin.x - ray.origin.x) * invDir.x;
+	tmax = (pMax.x - ray.origin.x) * invDir.x;
+	double tmin_x = dirIsNeg[0] > 0 ? tmin : tmax;
+	double tmax_x = dirIsNeg[0] > 0 ? tmax : tmin;
+	// y
+	tmin = (pMin.y - ray.origin.y) * invDir.y;
+	tmax = (pMax.y - ray.origin.y) * invDir.y;
+	double tmin_y = dirIsNeg[1] > 0 ? tmin : tmax;
+	double tmax_y = dirIsNeg[1] > 0 ? tmax : tmin;
+	// z
+	tmin = (pMin.z - ray.origin.z) * invDir.z;
+	tmax = (pMax.z - ray.origin.z) * invDir.z;
+	double tmin_z = dirIsNeg[2] > 0 ? tmin : tmax;
+	double tmax_z = dirIsNeg[2] > 0 ? tmax : tmin;
+
+	if (std::max(tmin_x, std::max(tmin_y, tmin_z)) < std::min(tmax_x, std::min(tmax_y, tmax_z)))
+		return true;
+	else
+		return false;
+
 }
