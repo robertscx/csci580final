@@ -1,0 +1,83 @@
+﻿  BVH.cpp
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(11,23): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(12,23): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(47,13): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,53): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,29): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(22,25): warning C4244: “参数”: 从“const double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(78,13): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(79,13): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+  main.cpp
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(11,23): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(12,23): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(47,13): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,53): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,29): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(22,25): warning C4244: “参数”: 从“const double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(78,13): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(79,13): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Scene.h(15,30): warning C4305: “参数”: 从“double”到“float”截断
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\OBJ_Loader.hpp(945,33): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Triangle.h(171,1): warning C4305: “=”: 从“double”到“float”截断
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Triangle.h(239,23): warning C4244: “初始化”: 从“int”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Triangle.h(242,1): warning C4305: “参数”: 从“double”到“float”截断
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(3382,56): warning C4244: “参数”: 从“_Ty”转换到“float”，可能丢失数据
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\main.cpp(15): message : 查看对正在编译的函数 模板 实例化“std::unique_ptr<Light,std::default_delete<Light>> std::make_unique<Light,Vector3f,int,0>(Vector3f &&,int &&)”的引用
+  Renderer.cpp
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(11,23): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(12,23): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(47,13): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,53): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,29): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(22,25): warning C4244: “参数”: 从“const double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(78,13): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(79,13): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Scene.h(15,30): warning C4305: “参数”: 从“double”到“float”截断
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Renderer.cpp(9,30): warning C4305: “初始化”: 从“double”到“float”截断
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Renderer.cpp(17,49): warning C4244: “参数”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Renderer.cpp(31,43): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+  Scene.cpp
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(11,23): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(12,23): warning C4244: “初始化”: 从“double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\global.h(47,13): warning C4244: “初始化”: 从“float”转换到“int”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,53): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,41): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(15,29): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Ray.h(22,25): warning C4244: “参数”: 从“const double”转换到“const float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(21,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,35): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,27): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(22,19): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(78,13): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\BoundBox.h(79,13): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\Users\zjq19\source\repos\WhittedBVHAcce\WhittedBVHAcce\Scene.h(15,30): warning C4305: “参数”: 从“double”到“float”截断
+  Vector.cpp
+  正在生成代码...
+  WhittedBVHAcce.vcxproj -> C:\Users\zjq19\source\repos\WhittedBVHAcce\x64\Debug\WhittedBVHAcce.exe
